@@ -30,10 +30,12 @@ def game_information():
 #Main Routine
 played_before = yes_no_checker("Have you played this game before? ")
 
+#If the User inputs "No/N" the game information will appear
 if played_before == "no":
     game_information()
     print()
 
+#If the User answers "Yes/Y" the program will continue
 if played_before == "yes":
     print("program continues")
     print()
