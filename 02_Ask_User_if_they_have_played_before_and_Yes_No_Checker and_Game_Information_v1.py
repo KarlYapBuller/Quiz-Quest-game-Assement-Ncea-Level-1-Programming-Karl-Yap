@@ -1,4 +1,4 @@
-#Ask_User_if_they_have_played_before_yes_no v1.py Component
+#Ask_User_if_they_have_played_before_yes_no_v1.py_Component
 #The User will be asked if they have played the game before
 #Yes/No Checker
 
@@ -27,16 +27,19 @@ def game_information():
     print("*****Game information*****")
     return""
 
-#Main Routine
-played_before = yes_no_checker("Have you played this game before? ")
+#Looped for testing purposes
+#Looped to make it easier to get test cases
+#The 'xxx' is the exit code to stop the loop
+played_before = ""
+while played_before != "xxx":
+    #Main Routine
+    played_before = yes_no_checker("Have you played this game before? ")
 
-#If the User inputs "No/N" the game information will appear
-if played_before == "no":
-    game_information()
-    print()
+    if played_before == "no":
+        game_information()
+        print()
 
-#If the User answers "Yes/Y" the program will continue
-if played_before == "yes":
-    print("program continues")
-    print()
+    if played_before == "yes":
+        print("program continues")
+        print()
 
