@@ -6,6 +6,7 @@
 def yes_no_checker(question):
     valid = False
     while not valid:
+        #The User response will be lowercased
         response = input(question).lower()
 
         #If user response is either 'yes' or 'y' the response will be outputed as yes.
