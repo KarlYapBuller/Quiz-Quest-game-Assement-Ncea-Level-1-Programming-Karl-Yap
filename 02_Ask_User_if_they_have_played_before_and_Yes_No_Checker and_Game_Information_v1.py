@@ -18,9 +18,10 @@ def yes_no_checker(question):
             response = "no"
             return response
 
-        #If user response is anything other than yes or no,user will be asked to answer yes or no.
+        #If user response is anything other than yes or no, User will be asked to answer yes or no.
         else:
             print("<error> please answer Yes/No (Y/N). ")
+            print()
 
 #Game information
 def game_information():
