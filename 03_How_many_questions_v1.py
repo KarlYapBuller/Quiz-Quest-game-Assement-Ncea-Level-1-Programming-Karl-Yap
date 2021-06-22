@@ -20,7 +20,7 @@ def integer_check(question, low=None, high=None):
             #User had to input the integer to the given question
             response = int(input(question))
 
-            #If the low variable is defined and the high variable is defined the situation is 'both'
+            #If the low variable is defined and the high variable is defined the situation is "both"
             if situation == "both":
                 #If the response is less than the defined low variable and the response is higher than the high defined variable
                 #The User is asked to input an integer between the defined low and high variables
@@ -28,8 +28,11 @@ def integer_check(question, low=None, high=None):
                     print("Please enter an integer between {} and {}".format(low, high))
                     continue
 
+            #If the low variable is defined and the high variable is not defined the situation is "low only"
             elif situation == "low only":
                 if response < low:
+                    #If the response is less than the defined low variable
+                    #The User is asked to input an integer that is more than or equal to the defined low variable
                     print("Please enter an integer that is more than (or equal to) {}".format(low))
                     continue
 
