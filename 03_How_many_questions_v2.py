@@ -1,7 +1,7 @@
 #Get and Check User input
-#If the situation is "low only" was deleted because it was not needed because 
+#If the situation is "low only" was deleted because it was not needed because
 #the low and high variable were defined when asking the question of "How many questions the User wanted to answer"
-#The low variable was 1 and the High variable was 20.
+#The low variable was 1 and the High variable was 20
 
 #Number Checking Function goes here
 def integer_check(question, low=None, high=None):
