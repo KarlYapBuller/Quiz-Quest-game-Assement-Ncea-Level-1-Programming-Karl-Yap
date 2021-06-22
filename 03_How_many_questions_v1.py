@@ -5,9 +5,11 @@ def integer_check(question, low=None, high=None):
 
     situation = ""
 
+    #If the low variable is defined and the high variable is defined the situation is "both"
     if low is not None and high is not None:
         situation = "both"
 
+    #If the low variable is defined and the high variable is not defined the situation is "low only"
     elif low is not None and high is None:
         situation = "low only"
 
