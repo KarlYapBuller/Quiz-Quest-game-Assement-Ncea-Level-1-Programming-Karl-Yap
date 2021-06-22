@@ -8,6 +8,9 @@ def integer_check(question, low=None, high=None):
     if low is not None and high is not None:
         situation = "both"
 
+    elif low is not None and high is None:
+        situation = "low only"
+
     while True:
 
         try:
@@ -21,6 +24,11 @@ def integer_check(question, low=None, high=None):
                 #The User is asked to input an integer between the defined low and high variables
                 if response < low or response > high:
                     print("Please enter an integer between {} and {}".format(low, high))
+                    continue
+
+            elif situation == "low only":
+                if response < low:
+                    print("Please enter an integer that is more than (or equal to) {}".format(low))
                     continue
 
             return response
