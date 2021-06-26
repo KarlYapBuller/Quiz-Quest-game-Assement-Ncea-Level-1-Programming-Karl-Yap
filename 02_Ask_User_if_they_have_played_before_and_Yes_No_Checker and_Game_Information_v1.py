@@ -32,16 +32,16 @@ def game_information():
 #Looped for testing purposes
 #Looped to make it easier to get test cases
 #The 'xxx' is the exit code to stop the loop
-played_before = ""
-while played_before != "xxx":
-    #Main Routine
-    played_before = yes_no_checker("Have you played this game before? ")
+for item in range(1,20):
 
-    if played_before == "no":
+    #Main Routine
+    game_loop = yes_no_checker("Have you played this game before? ")
+
+    if game_loop == "no":
         game_information()
         print()
 
-    if played_before == "yes":
+    elif game_loop == "yes":
         print("program continues")
         print()
 
