@@ -52,5 +52,6 @@ while game_loop == "":
     #The minimum number of questions the User can answer is 1 question
     #The maximum number of questions the User can answer is 20 questions
     how_many_questions = integer_check("How many questions would you like to answer (Integer between 1 and 20)? ", 1, 20)
+
     print("Questions Chosen to Answer: {}".format(how_many_questions))
     print()
