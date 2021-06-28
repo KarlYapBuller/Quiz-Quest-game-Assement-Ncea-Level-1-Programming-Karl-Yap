@@ -1,24 +1,36 @@
 #Game History
 
+#Game summary list for the questions answered results
 game_summary = []
 
+#Questions answered correct
 questions_answered_correct = 0
+#Questions answered incorrect
 questions_answered_incorrect = 0
-question_answered = 5
 
-for item in range(0, 5):
-    result = input("Question Result: ")
+#Loop of 5 questions
+for question_number in range(0, 5):
+    #Input the Question Result
+    question_result = input("Question Result: ")
 
-    outcome = "Question {}: {}".format(item, result)
+    #Question number and question answered result
+    question_outcome = "Question {}: {}".format(question_number, question_result)
 
-    if result == "incorrect":
+    #If the question result is incorrect
+    #The questions answered incorrect increases by 1
+    if question_result == "incorrect":
         questions_answered_incorrect += 1
 
-    elif result == "correct":
+    #If the question result is correct
+    #The questions_answered_correct increases by 1
+    elif question_result == "correct":
         questions_answered_correct += 1
 
-    game_summary.append(outcome)
+    #Puts the question outcome in the game summary list
+    game_summary.append(question_outcome)
 
+#The game summary is displayed to the User
+#The game sumary includes the Question number and the question answered result
 print()
 print("*****Game History*****")
 for game in game_summary:
