@@ -11,12 +11,14 @@ def question_checker(question):
             #User gets the question correct
             if response == question_given:
                 print("Correct")
+                print()
                 continue
 
             #If the User response is not equal to the question given
             #User gets the question wrong
             elif response != question_given:
-                print("Wrong")
+                print("Incorrect")
+                print()
                 continue
 
             return response
@@ -25,6 +27,7 @@ def question_checker(question):
         #The User will be displayed an <Error> message to please input an integer
         except ValueError:
             print("<Error> please input an integer")
+            print()
             continue
 
 #Question given
@@ -38,4 +41,4 @@ while game_loop == "":
 
     #Question asked to the User
     #The Question is 'What is 1 + 1?'
-    question_asked = question_checker("What is 1 + 1? ")
+    question_asked = question_checker("What is 1 + 1 equal to? (Please input an integer) ")
