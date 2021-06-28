@@ -28,7 +28,7 @@ def question_checker(question):
             continue
 
 #Question given
-#! + 1 = 2
+#1 + 1 = 2
 question_given = 1 + 1
 
 #Game loop
