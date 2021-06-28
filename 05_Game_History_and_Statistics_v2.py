@@ -1,5 +1,5 @@
 #Game History and Statistics component version 2
-#This piece of code displays to the User
+#This piece of code is the same as version 1 but displays to the User
 #How many questions they have answered correct and how many questions they have answered incorrect
 
 #Game summary list for the questions answered results
