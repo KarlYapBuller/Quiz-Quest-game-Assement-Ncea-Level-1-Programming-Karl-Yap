@@ -42,7 +42,7 @@ percent_incorrect = questions_answered_incorrect / number_of_questions_answered 
 #The game summary is displayed to the User
 #The game sumary includes the Question number and the question answered result
 #The number of questions answered correct and incorrect is displayed to the User
-#The percentage of how many questions they have answered correct and how many questions they have answered incorrect
+#The percentage of how many questions the User has answered correct and how many questions they have answered incorrect
 print()
 print("*****Game History*****")
 for game in game_summary:
