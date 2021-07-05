@@ -17,7 +17,7 @@ def integer_check(question, low=None, high=None):
         try:
             #User input has to be an integer
             #User had to input the integer to the given question
-            response = int(input(question))
+            response = float(input(question))
 
             #If the low variable is defined and the high variable is defined the situation is 'both'
             if situation == "both":
