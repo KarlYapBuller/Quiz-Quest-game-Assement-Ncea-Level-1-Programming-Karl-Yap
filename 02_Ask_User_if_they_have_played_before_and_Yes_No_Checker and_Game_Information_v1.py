@@ -35,13 +35,13 @@ def game_information():
 for item in range(1,20):
 
     #Main Routine
-    game_loop = yes_no_checker("Have you played this game before? ")
+    played_before = yes_no_checker("Have you played this game before? ")
 
-    if game_loop == "no":
+    if played_before == "no":
         game_information()
         print()
 
-    elif game_loop == "yes":
+    elif played_before == "yes":
         print("program continues")
         print()
 
