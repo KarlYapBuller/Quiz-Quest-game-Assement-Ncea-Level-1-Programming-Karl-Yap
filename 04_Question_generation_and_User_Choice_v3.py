@@ -1,5 +1,5 @@
 #Question generation and User Choice component version 3
-#This piece of code use rando number for the addition question unlike version 1 and version 2
+#This piece of code uses a random number for the addition question unlike version 1 and version 2
 
 import random
 
