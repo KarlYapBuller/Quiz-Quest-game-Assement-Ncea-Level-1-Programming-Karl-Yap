@@ -1,8 +1,8 @@
 #Ask_User_if_they_have_played_before_yes_no_v1.py_Component
 #The User will be asked if they have played the game before
-#Yes/No Checker
 
-#Check If they User's input is valid
+#Yes/No Checker
+#Check If the User's input is valid
 def yes_no_checker(question):
     valid = False
     while not valid:
