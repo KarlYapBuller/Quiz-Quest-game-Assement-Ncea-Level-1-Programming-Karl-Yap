@@ -6,7 +6,8 @@ import random
 #Number of question answered
 number_of_questions_answered = 0
 
-for item in range(0,10):
+game_loop = ""
+while game_loop == "":
 
     #Prints out the Question Number
     print("*****Question {}*****".format(number_of_questions_answered +1))
