@@ -10,8 +10,13 @@ for item in range(0,10):
     #Prints out the Question Number
     print("*****Question {}*****".format(number_of_questions_answered +1))
 
+    #Number 1 that is in the first position before
+    #The addition is a random integer between 0 and 20
     number_1 = random.randint(0,20)
+    #Number 2 that is in the first position before
+    #The addition is a random integer between 0 and 20
     number_2 = random.randint(0,20)
+    #The answer is equal to Number 1 + Number 2
     answer = number_1 + number_2
 
     error_message = "<ERROR> Please input an Integer"
