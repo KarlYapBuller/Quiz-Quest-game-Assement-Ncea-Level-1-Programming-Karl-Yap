@@ -62,7 +62,7 @@ while game_loop == "":
     #Number of question answered
     number_of_questions_answered = 0
 
-    #Asjs the User what game mode they want to play (1. Addition 2. Subtraction 3. Multiplication 4. Division)
+    #Asks the User what game mode they want to play (1. Addition 2. Subtraction 3. Multiplication 4. Division)
     game_mode = game_mode_input_checker("What game mode do you want to play (1. Addition 2. Subtraction 3. Multiplication 4. Division)? ")
     print()
 
