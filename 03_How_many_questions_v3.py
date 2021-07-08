@@ -6,12 +6,12 @@
 #the User can choose is the Continuous questions where the User will be asked the continuous number of questions.
 
 
-def check_how_many_questions(question):
+def check_how_many_questions():
     while True:
         #Ask the User how many questions they want to answer if they want to play the
         #option where they can choose how many questions they want
         #to answer of if they want to play the continuous question option
-        response = input(question)
+        response = input("How many Questions would you like to answer (Press <ENTER> for continous question)? ")
 
         how_many_questions_error = "Please input either an integer that is more than 0 or <ENTER>."
 #If ifinite mode is not chosen, check response is an integer more than 0
@@ -34,7 +34,7 @@ def check_how_many_questions(question):
 
 number_of_questions_answered = 0
 
-user_choice_of_questions = check_how_many_questions("How many Questions would you like to answer (Press <ENTER> for continous question)? ")
+user_choice_of_questions = check_how_many_questions()
 
 #If the User's Choice is <ENTER> the User has decided to answer the Continuous Question's option
 if user_choice_of_questions == "":
