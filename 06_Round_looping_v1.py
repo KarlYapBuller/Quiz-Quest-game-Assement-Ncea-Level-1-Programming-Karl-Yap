@@ -1,4 +1,7 @@
-#Question generation and User Choice Component 4
+#Round looping component version 1
+#The Round Looping does not work as intended
+#If the User wants to quit the game (exit code 'xxx') and they press <ENTER> to play the game again,
+#The round heading (the number of questions the User answered) does not reset
 
 import random
 
@@ -376,5 +379,7 @@ while game_loop == "":
             #The Game Loop will end
             if game_loop == "xxx":
                 break
+
+        game_loop = continue_game("Press <Enter> if you wish to continue the game, if you wish to quit type 'xxx': ")
 
 print("Thank You for playing the Quiz Quest Game")
