@@ -1,6 +1,7 @@
 #Round looping component version 1
-#The Round Looping does not work as intended
-#If the User wants to quit the game (exit code 'xxx') and they press <ENTER> to play the game again,
+#The Round Looping component does not work as intended
+#The problem is that if the User wants to quit the game (exit code 'xxx') and
+#They press <ENTER> to play the game again,
 #The round heading (the number of questions the User answered) does not reset
 
 import random
