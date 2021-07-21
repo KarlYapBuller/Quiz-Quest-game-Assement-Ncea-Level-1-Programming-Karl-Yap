@@ -184,7 +184,6 @@ while game_loop == "":
             #End game if the number of rounds has been played
             if number_of_questions_answered == user_choice_of_questions:
                 number_of_questions_answered = 0
-                game_loop = continue_game("If you wish to play the game again press <ENTER>, if you do not want to play the game again type 'xxx': ")
                 break
 
             #If the number of rounds played is more than or equal to
@@ -254,7 +253,6 @@ while game_loop == "":
             #End game if the number of rounds has been played
             if number_of_questions_answered == user_choice_of_questions:
                 number_of_questions_answered = 0
-                game_loop = continue_game("If you wish to play the game again press <ENTER>, if you do not want to play the game again type 'xxx': ")
                 break
 
             #If the number of rounds played is more than or equal to
@@ -313,7 +311,6 @@ while game_loop == "":
             #End game if the number of rounds has been played
             if number_of_questions_answered == user_choice_of_questions:
                 number_of_questions_answered = 0
-                game_loop = continue_game("If you wish to play the game again press <ENTER>, if you do not want to play the game again type 'xxx': ")
                 break
 
             #If the number of rounds played is more than or equal to
@@ -376,7 +373,6 @@ while game_loop == "":
             #End game if the number of rounds has been played
             if number_of_questions_answered == user_choice_of_questions:
                 number_of_questions_answered = 0
-                game_loop = continue_game("If you wish to play the game again press <ENTER>, if you do not want to play the game again type 'xxx': ")
                 break
 
             #If the number of rounds played is more than or equal to
