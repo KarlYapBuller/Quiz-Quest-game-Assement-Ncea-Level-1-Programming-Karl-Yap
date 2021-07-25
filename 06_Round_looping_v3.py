@@ -3,18 +3,18 @@
 
 import random
 
-def check_how_many_questions():
+def check_how_many_questions(question):
     while True:
         #Ask the User how many questions they want to answer if they want to play the
         #option where they can choose how many questions they want
         #to answer of if they want to play the continuous question option
-        response = input("How many questions do you want to answer: ")
+        response = input(question)
 
         how_many_questions_error = "Please input either an integer that is more than 0 or <ENTER>."
 #If ifinite mode is not chosen, check response is an integer more than 0
         if response != "":
             try:
-                response = int(response)
+                response = int(question)
 
 #If response is too low, go back to the start of the loop and display an error message to help user
                 if response < 1:
@@ -127,7 +127,7 @@ number_of_questions_answered = 0
 game_loop = ""
 while game_loop == "":
 
-    user_choice_of_questions = check_how_many_questions()
+    user_choice_of_questions = check_how_many_questions("How many questions do you want to answer: ")
 
     #Asks the User what game mode they want to play (1. Addition 2. Subtraction 3. Multiplication 4. Division)
     game_mode = game_mode_input_checker("What game mode do you want to play (1. Addition 2. Subtraction 3. Multiplication 4. Division)? ")
