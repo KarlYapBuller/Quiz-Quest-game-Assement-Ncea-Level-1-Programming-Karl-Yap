@@ -14,7 +14,7 @@ def check_how_many_questions(question):
 #If ifinite mode is not chosen, check response is an integer more than 0
         if response != "":
             try:
-                response = int(question)
+                response = int(response)
 
 #If response is too low, go back to the start of the loop and display an error message to help user
                 if response < 1:
