@@ -476,7 +476,7 @@ while game_loop == "":
     #The number of questions answered correct and incorrect is displayed to the User
     #The percentage of how many questions the User has answered correct and how many questions they have answered incorrect
     #The User will be asked if they want to see their Game History and Statistics in the final Base Component
-    #This will be integrated with the yes_no function
+    #This will be integrated with the yes_no function and the Game History will be put into its own funcction
     #Calculate Game Statistics
     print()
     print("*****Game History*****")
