@@ -1,4 +1,8 @@
 #Quiz Quest Assesment version 1
+#Base Component before the Usability testing
+#Things that need to be fixed include better spacing of the lines outputed, the instructions have to be clearer,
+#the questions being asked to the User have to be clearer, titles need to be added for important sections
+#to catch the User attention for what that section is about
 
 #The import random is used for the random integer between the specified ranges
 import random
@@ -183,7 +187,13 @@ def statement_generator(statement, decoration):
 
 #Main routine goes here
 
+#Asks the User if they have played the Game before
+#If the User answers Yes the Game Continues
+#If the User answers No the Game Instructions are outputed to the User
+#If the User answers an invalid input an Error message will be outputed to
+#the User instructing the User to input the valid value
 played_before = yes_no_checker("Have you played this game before? ")
+print()
 
 if played_before == "no":
     game_information()
