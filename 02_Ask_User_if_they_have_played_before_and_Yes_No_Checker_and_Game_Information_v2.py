@@ -1,4 +1,4 @@
-#Ask the User if they have Played Before Yes/No Component version 2SS
+#Ask the User if they have Played Before Yes/No Component version 2
 #Version 2 of this Component includes the Game Information for the Quiz Quest Game
 
 #Yes/No Checker
@@ -25,6 +25,7 @@ def yes_no_checker(question):
             print()
 
 #Game information
+#Instructs the User on how the Quiz Quest Game works and how to play the Quiz Quest Game
 def game_information():
     print("*****Quiz Quest Game information*****")
     print("The Quiz Quest Game is a mathematics game where you answer either addition, subtraction, multiplication or division questions\n"
