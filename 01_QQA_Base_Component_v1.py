@@ -35,7 +35,15 @@ def yes_no_checker(question):
 
 #Function that contains the information of how to play the Quiz Quest Game
 def game_information():
-    print("*****Game information*****")
+    statement_generator("Game Information", "#")
+    print("The Quiz Quest Game is a mathematics game where you answer either addition, subtraction, multiplication or division questions\n"
+    "As soon as the game starts you will be asked how many questions you want to answer where you choose the number of questions you want to answer or\n"
+    "you can press <ENTER> to answer a continuos number of questions. You then will have the option to choose one of the\n"
+    "four Game Modes (addition, subtraction, multiplication or division)\n"
+    "previosly mentioned. After each given question you will be asked if you want to continue playing the game or not.\n" 
+    "To continue playing you press <ENTER> and to stop answering questions you input 'xxx'.\n"
+    "This is a lot to take in but the game is very intuitive and there should be clear instructions for you to play\n"
+    "OK Good Luck! Go have some fun! Let the Game begin!\n")
     return""
 
 
