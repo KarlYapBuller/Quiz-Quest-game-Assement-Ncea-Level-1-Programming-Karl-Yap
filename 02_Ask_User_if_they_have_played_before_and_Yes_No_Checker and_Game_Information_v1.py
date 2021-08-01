@@ -25,6 +25,7 @@ def yes_no_checker(question):
             print()
 
 #Game information
+#Instructs the User on how the Quiz Quest Game works and how to play the Quiz Quest Game
 def game_information():
     print("*****Game information*****")
     return""
