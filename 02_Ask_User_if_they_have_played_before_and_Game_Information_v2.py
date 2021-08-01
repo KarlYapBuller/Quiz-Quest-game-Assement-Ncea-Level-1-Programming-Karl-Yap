@@ -1,5 +1,5 @@
 #Ask the User if they have Played Before Yes/No Component version 2
-#Version 2 of this Component includes the Game Information of the Quiz Quest Game
+#Version 2 of this Component includes the Game Information for the Quiz Quest Game
 
 #Yes/No Checker
 #Check If the User's input is valid
