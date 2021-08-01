@@ -1,5 +1,5 @@
-#Ask_User_if_they_have_played_before_yes_no_v1.py_Component
-#The User will be asked if they have played the game before
+#Ask User if they have played before Yes/No Component version 1
+#Version 1 of this Component does not include the Game Information for the Quiz Quest Game
 
 #Yes/No Checker
 #Check If the User's input is valid
@@ -35,6 +35,7 @@ def game_information():
 for item in range(1,20):
 
     #Main Routine
+    #The User will be asked if they have played the game before
     played_before = yes_no_checker("Have you played this game before? ")
 
     if played_before == "no":
