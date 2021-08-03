@@ -132,18 +132,18 @@ def statement_generator(statement, decoration):
 
 #Main routine goes here
 
+#Questions answered correct
+questions_answered_correct = 0
+
+#Questions answered incorrect
+questions_answered_incorrect = 0
+
+#Number of question answered
+number_of_questions_answered = 0
+
 #Game loop
 game_loop = ""
 while game_loop == "":
-
-    #Questions answered correct
-    questions_answered_correct = 0
-
-    #Questions answered incorrect
-    questions_answered_incorrect = 0
-
-    #Number of question answered
-    number_of_questions_answered = 0
 
     #Ask the User how many questions they want to answer if they want to play the
     #option where they can choose how many questions they want
