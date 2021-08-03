@@ -4,7 +4,10 @@
 #They press <ENTER> to play the game again,
 #The round heading (the number of questions the User answered) does not reset is now fixed
 #This was fixed by when the User wants to quit answering the questions the number of questions
-#The User wants to answer is reset back to 0.
+#The User wants to answer is reset back to 0 and
+#the number of questions answered variable was put inside the game loop.
+#The questions answered correct variable and
+#the questions answered incorrect variable was also put inside the game loop.
 
 #The import random is used for the random integer between the specified ranges
 import random
