@@ -47,6 +47,7 @@ def check_how_many_questions(question):
                 continue
 
             #If the User's respinse is more then 50, they will be aksed if they are sure they want to answer this many questions (Y/N)
+            #This functions includes the yes no checker function
             if response >= 50:
                 too_many_questions = yes_no_checker("Are you sure you want to answer {} questions (Y/N)? ".format(response))
 
