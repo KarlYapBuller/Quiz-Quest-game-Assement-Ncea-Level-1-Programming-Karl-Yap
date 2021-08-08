@@ -160,13 +160,9 @@ def continue_game(question):
 
 def game_history_and_statistics():
 
+    #Game History
     #The game summary is displayed to the User
     #The game summary includes the Question number and the question answered result
-    #The number of questions answered correct and incorrect is displayed to the User
-    #The percentage of how many questions the User has answered correct and how many questions they have answered incorrect
-    #The User will be asked if they want to see their Game History and Statistics in the final Base Component
-    #This will be integrated with the yes_no function
-    #Calculate Game Statistics
     print()
     print("*****Game History*****")
     for game in game_summary:
@@ -174,6 +170,10 @@ def game_history_and_statistics():
 
     print()
 
+    #Game Statistics
+    #Calculate Game Statistics
+    #The number of questions answered correct and incorrect is displayed to the User
+    #The percentage of how many questions the User has answered correct and how many questions they have answered incorrect
     print("Questions Answered Correct: {} ({:.0f}%) \t|\t Questions Answered Incorrectly: {} ({:.0f}%) \t".format(questions_answered_correct,
                                                                                                                   percent_correct,
                                                                                                                   questions_answered_incorrect,
