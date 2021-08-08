@@ -72,7 +72,7 @@ def check_how_many_questions(question):
 #Number of questions the User has answered
 number_of_questions_answered = 0
 
-#Ask's the User how many questions they want to answer
+#Ask the User how many questions they want to answer
 user_choice_of_questions = check_how_many_questions("How many Questions would you like to answer (Please input an integer more than 0)? ")
 
 #Question heading
