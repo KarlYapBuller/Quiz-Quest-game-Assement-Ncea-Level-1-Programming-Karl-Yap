@@ -9,7 +9,9 @@
 #The .format has been changed to f"{}" in the code as it outputs
 #the same outcome but it is more redable in the program code
 #Emojis in approproate areas have also been added to make the game more visually pleasing
-#'Welcome to the Quiz Quest Game' has beeen added to welcome the User to the game
+
+#Constant for the Error message which appears when the User inputs an invalid value
+ERROR_MESSAGE = "<ERROR>, please input a valid value."
 
 #The import random is used for the random integer between the specified ranges
 import random
@@ -37,12 +39,12 @@ def yes_no_checker(question):
 
         #If user response is anything other than yes or no, User will be asked to answer yes or no.
         else:
-            print("<error> please answer Yes/No (Y/N). ")
+            print("{} Please answer Yes/No (Y/N). ".format(ERROR_MESSAGE))
             print()
 
 #Function that contains the information of how to play the Quiz Quest Game
 def game_information():
-    statement_generator("Game Information", "#")
+    statement_generator("Game Information", "^")
     print("The Quiz Quest Game is a mathematics game where you answer either addition, subtraction, multiplication or division questions\n"
     "As soon as the game starts you will be asked how many questions you want to answer where you choose the number of questions you want to answer or\n"
     "you can press <ENTER> to answer a continuos number of questions. You then will have the option to choose one of the\n"
@@ -59,7 +61,8 @@ def check_how_many_questions(question):
     while True:
 
         #How many questions error
-        how_many_questions_error = "Please input either an integer that is more than 0."
+        how_many_questions_error = "{} Please input either an integer that is more than 0.".format(ERROR_MESSAGE)
+        print()
         try:
             #Ask the User how many questions they want to answer
             #The User can choose how many questions they want to answer (minimum is 1 and there is no maximum)
@@ -69,9 +72,9 @@ def check_how_many_questions(question):
                 print(how_many_questions_error)
                 continue
 
-            #If the User's respinse is more then 50, they will be aksed if they are sure they want to answer this many questions (Y/N)
+            #If the User's response is more then 20, they will be aksed if they are sure they want to answer this many questions (Y/N)
             #This functions includes the yes no checker function
-            if response >= 50:
+            if response >= 20:
                 too_many_questions = yes_no_checker("Are you sure you want to answer {} questions (Y/N)? ".format(response))
 
                 #If the User answers yes the program will continue
@@ -95,7 +98,7 @@ def game_mode_input_checker(question):
     while True:
 
         #Error message
-        game_mode_error_message = "Error please input an Integer between 1 and 4 (1. Addition 2. Subtraction 3. Multiplication 4. Division)"
+        game_mode_error_message = "{} Please input an Integer between 1 and 4 (1. Addition 2. Subtraction 3. Multiplication 4. Division)".format(ERROR_MESSAGE)
 
         try:
             #It is an float input in the case the User inpurs a valid input but just with a .0
@@ -139,7 +142,7 @@ def input_checker(question):
             return response
         # Error message will be printed out to the User
         except ValueError:
-            print("<ERROR> Please enter an Integer\n")
+            print("{} Please enter an Integer\n".format)
             continue
 
 #Continue the game function
@@ -162,10 +165,16 @@ def continue_game(question):
         #If response is not "" or 'xxx' Error message will display to the User
         else:
             print()
-            print("<Error> please enter either <Enter> or 'xxx'")
+            print("{} Please enter either <Enter> or 'xxx'".format)
             print()
 
 def game_history_and_statistics():
+
+    #Heading for 'Game History and Statistics'
+    #This heading is used to draw the User attention to the information underneath the heading
+    print()
+    statement_generator("Game History and Statistics", "%")
+    print()
 
     #Game History
     #The game summary is displayed to the User
@@ -213,13 +222,13 @@ def statement_generator(statement, decoration):
 #Main routine goes here
 
 #Welcomes the User to the Quiz Quest Game
-statement_generator("Welcome to the Quiz Quest Game", "#")
+statement_generator("Welcome to the Quiz Quest Game", "-")
 print()
 
 #Heading for 'ask the User if they have played before'
 #This heading is used to draw the User attention to the given question and to get the
 #User to realise that this is an important part of the game and that they need to input an answer
-statement_generator("Played Before", "#")
+statement_generator("Played Before", "=")
 print()
 
 #Asks the User if they have played the Game before
@@ -272,7 +281,7 @@ while game_loop == "":
     #Heading for 'Game Mode'
     #This heading is used to draw the User attention to the given question and to get the
     #User to realise that this is an important part of the game and that they need to input an answer
-    statement_generator("Select Game Mode", "#")
+    statement_generator("Select Game Mode", "&")
     print()
 
     #Asks the User what game mode they want to play (1. Addition 2. Subtraction 3. Multiplication 4. Division)
@@ -628,6 +637,7 @@ while game_loop == "":
                 break
 
     #Ask the User if the want to see their Game History and Statistics
+    print()
     see_history_and_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
 
     #If the User inputs 'yes' they want to see their Game History and Statistics
@@ -636,10 +646,21 @@ while game_loop == "":
         game_history_and_statistics()
         print()
 
+    #Heading for 'Play Again?'
+    #This heading is used to draw the User attention to the given question and to get the
+    #User to realise that this is an important part of the game and that they need to input an answer
+    statement_generator("Play Again?", "*")
+    print()
+
     #The User will be asked if they wish to play the game again (<ENTER>) or if they wish to not
     #play the game again ('xxx')
     game_loop = continue_game("If you wish to play the game again press <ENTER>, if you do not want to play the game again type 'xxx': ")
     print()
+
+#Heading for 'Thanks'
+#This heading is used to draw the User attention and thank the User for playing the Quiz Quest Game
+statement_generator("Thanks", "!")
+print()
 
 #Thanks the User for playing the game
 print("Thank You for playing the Quiz Quest Game")
