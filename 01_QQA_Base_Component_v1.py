@@ -62,9 +62,9 @@ def check_how_many_questions(question):
                 print(how_many_questions_error)
                 continue
 
-            #If the User's respinse is more then 50, they will be aksed if they are sure they want to answer this many questions (Y/N)
+            #If the User's response is more then 30, they will be aksed if they are sure they want to answer this many questions (Y/N)
             #This functions includes the yes no checker function
-            if response >= 50:
+            if response >= 30:
                 too_many_questions = yes_no_checker("Are you sure you want to answer {} questions (Y/N)? ".format(response))
 
                 #If the User answers yes the program will continue
@@ -203,6 +203,11 @@ def statement_generator(statement, decoration):
     return ""
 
 #Main routine goes here
+
+#Welcomes the User to the Quiz Quest Game
+statement_generator("Welcome to the Quiz Quest Game", "#")
+print()
+
 
 #Asks the User if they have played the Game before
 #If the User answers Yes the Game Continues
