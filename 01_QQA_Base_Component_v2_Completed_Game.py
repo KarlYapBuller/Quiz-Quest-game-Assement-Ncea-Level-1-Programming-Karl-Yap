@@ -1,4 +1,4 @@
-#Quiz Quest
+#Quiz Quest Completed Game
 #Quiz Quest Assesment version 2
 #Base Component After the Usability testing
 #Things that have been fixed include better spacing of the lines outputed, the instructions are more clearer for the User,
