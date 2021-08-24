@@ -8,7 +8,7 @@
 #the reoccuring Error messsages and the comments in the code is more descriptive
 #The .format has been changed to f"{}" in the code as it outputs
 #the same outcome but it is more redable in the program code
-#Emojis in approproate areas have also been added to make the game more visually pleasing
+#Emojis in approproate areas have also been added to make the game more visually pleasing for the User
 
 #Constant for the Error message which appears when the User inputs an invalid value
 ERROR_MESSAGE = "<ERROR> 😅, please input a valid value."
