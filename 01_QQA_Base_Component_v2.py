@@ -321,7 +321,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
+                question_outcome = f"✍ Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -340,7 +340,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
+                question_outcome = f"✍ Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -413,7 +413,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
+                question_outcome = f"✍ Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -433,7 +433,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
+                question_outcome = f"✍ Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -495,7 +495,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
+                question_outcome = f"✍ Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -515,7 +515,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
+                question_outcome = f"✍ Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -581,7 +581,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
+                question_outcome = f"✍ Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -601,7 +601,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
+                question_outcome = f"✍ Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -636,6 +636,7 @@ while game_loop == "":
     #Ask the User if the want to see their Game History and Statistics
     print()
     see_history_and_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
+    print()
 
     #If the User inputs 'yes' they want to see their Game History and Statistics
     #Their Game History and Statistics will be displayed
