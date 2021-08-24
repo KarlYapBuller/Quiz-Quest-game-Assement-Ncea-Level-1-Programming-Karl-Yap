@@ -50,8 +50,8 @@ def game_information():
     "You then will have the option to choose one of the four Game Modes (addition, subtraction, multiplication or division)\n"
     "previosly mentioned. After each given question you will be asked if you want to continue playing the game or not.\n" 
     "To continue playing you press <ENTER> and to stop answering questions you input 'xxx'.\n"
-    "If you chose to stop answering questions or you have run out of questions you will be asked if you want to play the game again"
-    "To play the game again you press <ENTER> and to quit the game for good you input 'xxx'."
+    "If you chose to stop answering questions or you have run out of questions you will be asked if you want to play the game again.\n"
+    "To play the game again you press <ENTER> and to quit the game for good you input 'xxx'.\n"
     "This is a lot to take in but the game is very intuitive and there should be clear instructions for you to play\n"
     "OK Good Luck! Go have some fun! Let the Game begin!\n")
     return""
@@ -165,7 +165,6 @@ def continue_game(question):
 
         #If response is not "" or 'xxx' Error message will display to the User
         else:
-            print()
             print(f"{ERROR_MESSAGE} Please enter either <Enter> or 'xxx'")
             print()
 
@@ -661,7 +660,7 @@ statement_generator("🙏 Thanks 🙏", "!")
 print()
 
 #Thanks the User for playing the game
-print("Thank You for playing the Quiz Quest Game")
+print("Thank You for playing the Quiz Quest Game 😊")
 
 
 
