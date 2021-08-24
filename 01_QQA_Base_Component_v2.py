@@ -39,18 +39,19 @@ def yes_no_checker(question):
 
         #If user response is anything other than yes or no, User will be asked to answer yes or no.
         else:
-            print("{} Please answer Yes/No (Y/N). ".format(ERROR_MESSAGE))
+            print(f"{ERROR_MESSAGE} Please answer Yes/No (Y/N). ")
             print()
 
 #Function that contains the information of how to play the Quiz Quest Game
 def game_information():
     statement_generator("Game Information", "^")
     print("The Quiz Quest Game is a mathematics game where you answer either addition, subtraction, multiplication or division questions\n"
-    "As soon as the game starts you will be asked how many questions you want to answer where you choose the number of questions you want to answer or\n"
-    "you can press <ENTER> to answer a continuos number of questions. You then will have the option to choose one of the\n"
-    "four Game Modes (addition, subtraction, multiplication or division)\n"
+    "As soon as the game starts you will be asked how many questions you want to answer where you choose the number of questions you want to answer.\n"
+    "You then will have the option to choose one of the four Game Modes (addition, subtraction, multiplication or division)\n"
     "previosly mentioned. After each given question you will be asked if you want to continue playing the game or not.\n" 
     "To continue playing you press <ENTER> and to stop answering questions you input 'xxx'.\n"
+    "If you chose to stop answering questions or you have run out of questions you will be asked if you want to play the game again"
+    "To play the game again you press <ENTER> and to quit the game for good you input 'xxx'."
     "This is a lot to take in but the game is very intuitive and there should be clear instructions for you to play\n"
     "OK Good Luck! Go have some fun! Let the Game begin!\n")
     return""
@@ -61,7 +62,7 @@ def check_how_many_questions(question):
     while True:
 
         #How many questions error
-        how_many_questions_error = "{} Please input either an integer that is more than 0.".format(ERROR_MESSAGE)
+        how_many_questions_error = f"{ERROR_MESSAGE} Please input either an integer that is more than 0."
         print()
         try:
             #Ask the User how many questions they want to answer
@@ -75,7 +76,7 @@ def check_how_many_questions(question):
             #If the User's response is more then 20, they will be aksed if they are sure they want to answer this many questions (Y/N)
             #This functions includes the yes no checker function
             if response >= 20:
-                too_many_questions = yes_no_checker("Are you sure you want to answer {} questions (Y/N)? ".format(response))
+                too_many_questions = yes_no_checker(f"Are you sure you want to answer {response} questions (Y/N)? ")
 
                 #If the User answers yes the program will continue
                 if too_many_questions == "yes":
@@ -98,7 +99,7 @@ def game_mode_input_checker(question):
     while True:
 
         #Error message
-        game_mode_error_message = "{} Please input an Integer between 1 and 4 (1. Addition 2. Subtraction 3. Multiplication 4. Division)".format(ERROR_MESSAGE)
+        game_mode_error_message = f"{ERROR_MESSAGE} Please input an Integer between 1 and 4 (1. Addition 2. Subtraction 3. Multiplication 4. Division)"
 
         try:
             #It is an float input in the case the User inpurs a valid input but just with a .0
@@ -142,7 +143,7 @@ def input_checker(question):
             return response
         # Error message will be printed out to the User
         except ValueError:
-            print("{} Please enter an Integer\n".format)
+            print(f"{ERROR_MESSAGE} Please enter an Integer\n")
             continue
 
 #Continue the game function
@@ -165,7 +166,7 @@ def continue_game(question):
         #If response is not "" or 'xxx' Error message will display to the User
         else:
             print()
-            print("{} Please enter either <Enter> or 'xxx'".format)
+            print(f"{ERROR_MESSAGE} Please enter either <Enter> or 'xxx'")
             print()
 
 def game_history_and_statistics():
@@ -190,10 +191,7 @@ def game_history_and_statistics():
     #Calculate Game Statistics
     #The number of questions answered correct and incorrect is displayed to the User
     #The percentage of how many questions the User has answered correct and how many questions they have answered incorrect
-    print("Questions Answered Correct: {} ({:.0f}%) \t|\t Questions Answered Incorrectly: {} ({:.0f}%) \t".format(questions_answered_correct,
-                                                                                                                  percent_correct,
-                                                                                                                  questions_answered_incorrect,
-                                                                                                                  percent_incorrect))
+    print(f"Questions Answered Correct: {questions_answered_correct} ({percent_correct:.0f}%) \t|\t Questions Answered Incorrectly: {questions_answered_incorrect} ({percent_incorrect:.0f}%) \t")
     print()
 
 
@@ -292,7 +290,7 @@ while game_loop == "":
 
         #The heading is equal to the number of questions the User has answered out of
         #the number of questions the User has chosen to answer
-        heading = "Question {} of {}".format(number_of_questions_answered + 1, user_choice_of_questions)
+        heading = f"Question {number_of_questions_answered + 1} of {user_choice_of_questions}"
 
         #Game Mode 1. Addition
         if game_mode == 1:
@@ -311,7 +309,7 @@ while game_loop == "":
 
             #The question asked to the User
             #The Input Checker is a float input in the case the User input the correct answer but just with a .0
-            response = input_checker("What is {} + {}?  ".format(number_1, number_2))
+            response = input_checker(f"What is {number_1} + {number_2}?  ")
 
             #If the User's response is equal to the answer (Number 1 + Number 2) the User gets the question 'Correct'
             #Puts the question outcome in the game summary list by means of appending
@@ -324,7 +322,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = "Question {} | Result: {} | Your Answer: {} | Correct Answer: {}".format(number_of_questions_answered + 1, result, response, answer)
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -343,7 +341,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = "Question {} | Result: {} | Your Answer: {} | Correct Answer: {}".format(number_of_questions_answered + 1, result, response, answer)
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -398,11 +396,11 @@ while game_loop == "":
 
             #The question asked to the User if the answer is equal to Number 1 - Number 2
             if answer == number_1 - number_2:
-                response = input_checker("What is {} - {}? ".format(number_1, number_2))
+                response = input_checker(f"What is {number_1} - {number_2}? ")
 
             #The question asked to the User if tbe answer is equal to Number 2 - Number 1
             else:
-                response = input_checker("What is {} - {}? ".format(number_2, number_1))
+                response = input_checker(f"What is {number_2} - {number_1}? ")
 
             #If the User's response is equal to the answer (Number 1 - Number 2/Number 2 - Number 1)
             #The User gets the question 'Correct'
@@ -416,7 +414,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = "Question {} | Result: {} | Your Answer: {} | Correct Answer: {}".format(number_of_questions_answered + 1, result, response, answer)
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -436,7 +434,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = "Question {} | Result: {} | Your Answer: {} | Correct Answer: {}".format(number_of_questions_answered + 1, result, response, answer)
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -484,7 +482,7 @@ while game_loop == "":
             answer = number_1 * number_2
 
             #The question asked to the User
-            response = input_checker("What is {} x {}? ".format(number_1, number_2))
+            response = input_checker(f"What is {number_1} x {number_2}? ")
 
             #If the User's response is equal to the answer (Number 1 x Number 2)
             #The User gets the question 'Correct'
@@ -498,7 +496,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = "Question {} | Result: {} | Your Answer: {} | Correct Answer: {}".format(number_of_questions_answered + 1, result, response, answer)
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -518,7 +516,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = "Question {} | Result: {} | Your Answer: {} | Correct Answer: {}".format(number_of_questions_answered + 1, result, response, answer)
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -570,7 +568,7 @@ while game_loop == "":
             answer = number_2
 
             #The question asked to the User is what is the Product answer / Number 1
-            response = input_checker("What is {} / {}? ".format(product_answer, number_1))
+            response = input_checker(f"What is {product_answer} / {number_1}? ")
 
             #If the User's response is equal to the answer (Product answer / Number 1 = Number 2)
             #The User gets the question 'Correct'
@@ -584,7 +582,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = "Question {} | Result: {} | Your Answer: {} | Correct Answer: {}".format(number_of_questions_answered + 1, result, response, answer)
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -604,7 +602,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = "Question {} | Result: {} | Your Answer: {} | Correct Answer: {}".format(number_of_questions_answered + 1, result, response, answer)
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
