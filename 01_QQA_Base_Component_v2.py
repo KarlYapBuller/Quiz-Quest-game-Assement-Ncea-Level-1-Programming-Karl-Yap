@@ -11,7 +11,7 @@
 #Emojis in approproate areas have also been added to make the game more visually pleasing
 
 #Constant for the Error message which appears when the User inputs an invalid value
-ERROR_MESSAGE = "<ERROR>, please input a valid value."
+ERROR_MESSAGE = "<ERROR> 😅, please input a valid value."
 
 #The import random is used for the random integer between the specified ranges
 import random
@@ -44,7 +44,7 @@ def yes_no_checker(question):
 
 #Function that contains the information of how to play the Quiz Quest Game
 def game_information():
-    statement_generator("Game Information", "^")
+    statement_generator("Game Information 📚", "^")
     print("The Quiz Quest Game is a mathematics game where you answer either addition, subtraction, multiplication or division questions\n"
     "As soon as the game starts you will be asked how many questions you want to answer where you choose the number of questions you want to answer.\n"
     "You then will have the option to choose one of the four Game Modes (addition, subtraction, multiplication or division)\n"
@@ -80,11 +80,11 @@ def check_how_many_questions(question):
 
                 #If the User answers yes the program will continue
                 if too_many_questions == "yes":
-                    print("Ok! Sorry for asking")
+                    print("Ok! Sorry for asking 🙂")
 
                 #If the User answers no they will be advised to input a lower value
                 elif too_many_questions == "no":
-                    print("Ok! Try input a lower value")
+                    print("Ok! Try input a lower value 🙃")
                     continue
 
             return response
@@ -174,14 +174,14 @@ def game_history_and_statistics():
     #Heading for 'Game History and Statistics'
     #This heading is used to draw the User attention to the information underneath the heading
     print()
-    statement_generator("Game History and Statistics", "%")
+    statement_generator("📜 Game History and Statistics 📈", "%")
     print()
 
     #Game History
     #The game summary is displayed to the User
     #The game summary includes the Question number and the question answered result
     print()
-    print("*****Game History*****")
+    print("***** 📜 Game History 📜 *****")
     for game in game_summary:
         print(game)
 
@@ -191,7 +191,7 @@ def game_history_and_statistics():
     #Calculate Game Statistics
     #The number of questions answered correct and incorrect is displayed to the User
     #The percentage of how many questions the User has answered correct and how many questions they have answered incorrect
-    print(f"Questions Answered Correct: {questions_answered_correct} ({percent_correct:.0f}%) \t|\t Questions Answered Incorrectly: {questions_answered_incorrect} ({percent_incorrect:.0f}%) \t")
+    print(f"Questions Answered Correct ✅: {questions_answered_correct} ({percent_correct:.0f}%) \t|\t Questions Answered Incorrectly ❌: {questions_answered_incorrect} ({percent_incorrect:.0f}%) \t")
     print()
 
 
@@ -220,13 +220,13 @@ def statement_generator(statement, decoration):
 #Main routine goes here
 
 #Welcomes the User to the Quiz Quest Game
-statement_generator("Welcome to the Quiz Quest Game", "-")
+statement_generator("👋 Welcome to the Quiz Quest Game 👋", "-")
 print()
 
 #Heading for 'ask the User if they have played before'
 #This heading is used to draw the User attention to the given question and to get the
 #User to realise that this is an important part of the game and that they need to input an answer
-statement_generator("Played Before", "=")
+statement_generator("▶ Played Before ▶", "=")
 print()
 
 #Asks the User if they have played the Game before
@@ -270,7 +270,7 @@ while game_loop == "":
     #Heading for 'How many questions'
     #This heading is used to draw the User attention to the given question and to get the
     #User to realise that this is an important part of the game and that they need to input an answer
-    statement_generator("How many questions", "#")
+    statement_generator("❓ How many questions ❓", "#")
 
     #Ask the User how many questions they want to answer
     user_choice_of_questions = check_how_many_questions("How many Questions would you like to answer (Please input an integer more than 0)? ")
@@ -279,7 +279,7 @@ while game_loop == "":
     #Heading for 'Game Mode'
     #This heading is used to draw the User attention to the given question and to get the
     #User to realise that this is an important part of the game and that they need to input an answer
-    statement_generator("Select Game Mode", "&")
+    statement_generator("🎮 Select Game Mode 🎮", "&")
     print()
 
     #Asks the User what game mode they want to play (1. Addition 2. Subtraction 3. Multiplication 4. Division)
@@ -290,7 +290,7 @@ while game_loop == "":
 
         #The heading is equal to the number of questions the User has answered out of
         #the number of questions the User has chosen to answer
-        heading = f"Question {number_of_questions_answered + 1} of {user_choice_of_questions}"
+        heading = f"✍ Question {number_of_questions_answered + 1} of {user_choice_of_questions} ✍"
 
         #Game Mode 1. Addition
         if game_mode == 1:
@@ -322,7 +322,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -341,7 +341,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -414,7 +414,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -434,7 +434,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -496,7 +496,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -516,7 +516,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -582,7 +582,7 @@ while game_loop == "":
             #the Game History and Statistics function
             if response == answer:
                 result = "Correct"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -602,7 +602,7 @@ while game_loop == "":
             #the Game History and Statistics function
             else:
                 result = "Incorrect"
-                question_outcome = f"Question {number_of_questions_answered + 1} | Result: {result} | Your Answer: {response} | Correct Answer: {answer}"
+                question_outcome = f"Question {number_of_questions_answered + 1} | Result ✨: {result} | Your Answer 🤓: {response} | Correct Answer ✅: {answer}"
                 print()
                 game_summary.append(question_outcome)
                 number_of_questions_answered += 1
@@ -657,7 +657,7 @@ while game_loop == "":
 
 #Heading for 'Thanks'
 #This heading is used to draw the User attention and thank the User for playing the Quiz Quest Game
-statement_generator("Thanks", "!")
+statement_generator("🙏 Thanks 🙏", "!")
 print()
 
 #Thanks the User for playing the game
